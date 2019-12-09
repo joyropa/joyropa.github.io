@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>21st Century Literature Examination</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/w3.css">
+    <link rel="icon" href="assets/esti_icon.png" type="image/x-icon">
+    <style>
+        header,
+        footer {
+            text-align: center;
+            padding-top: 45px;
+            padding-bottom: 45px;
+            background: linear-gradient(to bottom right, #f0e68c, #795548);
+        }
+
+        header * {
+            line-height: 1em;
+            margin: 10px;
+        }
+
+        header img {
+            margin-bottom: 5px;
+        }
+
+        form {
+            margin-top: 45px;
+            margin-bottom: 45px;
+        }
+
+        form li p {
+            margin-bottom: 0px;
+        }
+
+        form li {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        hr {
+            border: 0.5px solid #795548;
+        }
+
+        footer {
+            margin-top: 45px;
+        }
+
+        .w3-modal li {
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="w3-brown">
+        <img src="assets/esti_icon.png" width="80" height="auto">
+        <h2>EDUCATIONAL SYSTEMS TECHNOLOGICAL INSTITUTE</h1>
+            <p class="w3-large">MURALLON, BOAC, MARINDUQUE</p>
+            <p class="w3-large">MIDTERM EXAM - 21<sup>st</sup> Century Literature</p>
+    </header>
+    <article class="w3-container">
+        <form name="sheet" class="w3-content" onsubmit="event.preventDefault(); checkAnswers();">
+            <div class="w3-container w3-margin-bottom">
+                <input class="w3-input w3-margin-bottom w3-border-brown w3-border w3-round-xxlarge" placeholder="Name"
+                    name="name">
+                <input class="w3-input w3-margin-bottom w3-border-brown w3-border w3-round-xxlarge"
+                    placeholder="Track/Section" name="trackSection">
+            </div>
+            <p style="margin-top: 50px;"><span class="w3-large w3-text-red">Direction:</span> Read the questions
+                carefully. Choose the choice of the best answer.</p>
+            <ol id="questions"></ol>
+            <div class="w3-container">
+                <button style="width: 100%" type="submit" class="w3-button w3-round-xxlarge w3-card w3-green">Check
+                    answers</button>
+            </div>
+        </form>
+    </article>
+    <article class="w3-container">
+        <div class="w3-center">
+            <h2>Programmers</h2>
+            <div class="w3-large">
+                <p>Merynjoy Ropa</p>
+                <p>Jessica Lagustan</p>
+                <p>Charmaine Fabricante</p>
+                <p>Glydel Abella</p>
+                <p>Allyna Marie Matre</p>
+                <p>Jessica Cahayag</p>
+            </div>
+            <h2>Technologies used</h2>
+            <div class="w3-large">
+                <p><b>HTML</b><br> For the structure.</p>
+                <p><b>CSS</b><br> For the styles.</p>
+                <p><b>JavaScript</b><br> For programming.</p>
+                <p><b>w3.css</b><br> A CSS framework provided by W3Schools.com for responsiveness.</p>
+            </div>
+        </div>
+    </article>
+    <div id="checkingModal" class="w3-modal w3-animate-opacity  ">
+        <div class="w3-modal-content">
+            <div class="w3-padding w3-teal">
+                <h2>The results</h2>
+            </div>
+            <div class="w3-container w3-center w3-border w3-border-teal w3-bottombar w3-leftbar w3-rightbar">
+                <p class="w3-large"><span id="name"></span>, from <span id="from"></span>, your score is <span
+                        id="score"></span> out of 50! That is
+                    <span id="percent"></span>%.</p>
+                <p class="w3-large" id="remarks"></p>
+                <div id="wrong" class="w3-left-align">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="w3-brown">
+        <h1>"Painful truths are better than beautiful lies"</h1>
+        <p>- Josephine M. Luna</p>
+    </footer>
+    <script src="assets/script.js"></script>
+    <script>
+        buildTheQuestions();
+    </script>
+</body>
+
+</html>
